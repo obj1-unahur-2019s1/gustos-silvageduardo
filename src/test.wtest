@@ -1,0 +1,55 @@
+import bolichito.*
+import personas.*
+import objetos.*
+
+test "brilla cuando ambos brillan"{
+	bolichito.ponerEnMostrador(munieco)
+	bolichito.ponerEnVidriera(placa)
+	assert.equals(true , bolichito.esBrillante())
+}
+
+test "no brilla cuando uno no brilla"{
+	bolichito.ponerEnMostrador(remera)
+	bolichito.ponerEnVidriera(placa)	
+	assert.equals(false , bolichito.esBrillante())
+}
+
+test "un color es igual " {
+	bolichito.ponerEnMostrador(remera)
+	bolichito.ponerEnVidriera(pelota)
+	assert.equals(true , bolichito.tieneAlgoDeColor(rojo))
+}
+
+test "un color no es igual " {
+	bolichito.ponerEnMostrador(remera)
+	bolichito.ponerEnVidriera(pelota)
+	assert.equals(false , bolichito.tieneAlgoDeColor(verde))
+}
+
+test "bolichito desequilibrado " {
+	bolichito.ponerEnMostrador(biblioteca)
+	bolichito.ponerEnVidriera(pelota)
+	assert.equals(true , bolichito.estaDesequilibrado())
+
+}
+
+test "bolichito equilibrado " {
+	bolichito.ponerEnMostrador(pelota)
+	bolichito.ponerEnVidriera(biblioteca)
+	assert.equals(false , bolichito.estaDesequilibrado())
+
+}
+
+test "bolichito es monocromatico " {
+	bolichito.ponerEnMostrador(placa)
+	bolichito.ponerEnVidriera(pelota)
+	assert.equals(true , bolichito.esMonocromatico())
+
+}
+
+test "bolichito no es monocromatico " {
+	bolichito.ponerEnMostrador(biblioteca)
+	bolichito.ponerEnVidriera(pelota)
+	assert.equals(false , bolichito.esMonocromatico())
+
+}

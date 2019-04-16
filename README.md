@@ -35,7 +35,7 @@ Finalmente, considerar (al menos) estos objetos:
 Agregar al modelo un bolichito, que vende dos objetos: uno está en la vidriera, otro está en el mostrador.
 Estos objetos van cambiando con el tiempo.
 
-Se esperar que el objeto que representa al bolichito responda a estos mensajes:
+Se espera que el objeto que representa al bolichito responda a estos mensajes:
 - `esBrillante()`: indica si los dos objetos que tiene (el de mostrador y el de vidriera) son de un material que brilla.
 
 - `esMonocromatico()`: indica si los dos objetos que tiene son del mismo color. <br> 
